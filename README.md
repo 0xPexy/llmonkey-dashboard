@@ -3,6 +3,14 @@
 A playful and composable DeFi dashboard designed for light degens.  
 LLMonkey Dashboard prioritizes a clean, emotional, and actionable UX that simplifies complex on-chain data — across multiple chains.
 
+## 📸 Preview
+
+Early look at the LLMonkey Dashboard UI.  
+Built with a playful tone, semantic styling, and responsive component structure —  
+laying the foundation for future AI-powered DeFi experiences.
+
+![LLMonkey Dashboard Preview](./public/llmonkey-dashboard-preview.png)
+
 ---
 
 ## 🧠 Project Purpose
