@@ -1,37 +1,25 @@
-import React from "react";
-import { Bell } from "lucide-react";
-import Button from "@/components/ui/Button";
-
 interface TopbarProps {
   hasNotification?: boolean;
-  username?: string;
+  username: string;
 }
 
-const Topbar: React.FC<TopbarProps> = ({
-  hasNotification = false,
-  username = "boss monkey",
-}) => {
+const Topbar: React.FC<TopbarProps> = ({ hasNotification, username }) => {
   return (
-    <header className="flex justify-between items-center w-full p-4">
-      <div className="flex items-center gap-3">
-        <div className="bg-black rounded-full w-10 h-10 flex items-center justify-center text-white text-2xl">
-          🐒
-        </div>
-        <span className="text-lg font-bold text-black">
-          Hey {username} 🐵! Ready to grow your bananas?
-        </span>
-      </div>
+    <div className="flex justify-between items-center w-full px-6 py-4 rounded-xl bg-white shadow text-body">
+      <div className="text-number">👋 Welcome back, {username}!</div>
 
       <div className="flex items-center gap-4">
-        <div className="relative">
-          <Bell className="w-6 h-6 text-black" />
-          {hasNotification && (
-            <span className="absolute top-0 right-0 block w-2 h-2 bg-red-500 rounded-full"></span>
-          )}
-        </div>
-        <Button variant="highlight">🍌 Connect Wallet</Button>
+        {hasNotification && (
+          <div className="relative">
+            <span className="text-xl">🔔</span>
+            <span className="absolute top-0 right-0 w-2 h-2 bg-red-500 rounded-full animate-ping" />
+          </div>
+        )}
+        <button className="text-caption bg-yellow-400 hover:bg-yellow-500 text-black py-1 px-3 rounded-lg transition">
+          Connect Wallet 🍌
+        </button>
       </div>
-    </header>
+    </div>
   );
 };
 
