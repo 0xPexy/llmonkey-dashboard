@@ -1,54 +1,66 @@
-# React + TypeScript + Vite
+# 🍌 LLMonkey Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A playful and composable DeFi dashboard designed for light degens.  
+LLMonkey Dashboard prioritizes a clean, emotional, and actionable UX that simplifies complex on-chain data — across multiple chains.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🧠 Project Purpose
 
-## Expanding the ESLint configuration
+LLMonkey is a modular, multi-chain DeFi dashboard focused on:
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- 📊 Portfolio & yield visualization
+- 🧠 Click-based, user-friendly interactions
+- 🧸 Emotionally engaging UI for light degen users
+- 🧩 Composability with future data and automation layers
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+This project is frontend-first and dashboard-centric, with future plans for AI-based opportunity recommendations and backend integrations.
+
+---
+
+## 🛠 Stack & Structure
+
+| Area        | Stack                            |
+|-------------|----------------------------------|
+| Frontend    | React + TypeScript + Vite       |
+| Styling     | TailwindCSS (v4)                |
+| Charting    | Recharts                        |
+| Fonts       | Poppins with semantic classes   |
+
+The project follows a component-driven architecture. Key directories within `src/` include:
+```
+src/
+  components/      # Dashboard Cards (Banana, Scoreboard, etc.)
+  styles/          # font.css with visual hierarchy
+  mocking/         # Mock data for chart
+  types/           # Shared interfaces (e.g. AssetPoint)
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## ✅ Current Status
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+- [x] Multi-chain portfolio chart mock + dynamic PNL feedback
+- [x] Card-based UI with playful tone and hover interactions
+- [x] Sidebar/Topbar redesign for brand tone alignment
+- [x] Semantic font system via `font.css`
+- [x] Visual hierarchy and tone established across components
+
+---
+
+## 🔭 Roadmap
+
+- [ ] Multi-chain asset and LP data integration
+- [ ] Strategy-based sorting and tagging UI
+- [ ] AI-powered opportunity recommendation (future)
+- [ ] Notion integration for action logging
+- [ ] Dark mode & mobile responsiveness
+
+---
+
+## 🚀 The Journey Begins Here
+
+DeFi dashboards can be emotional, fun, and smart — all at once.  
+LLMonkey Dashboard is the first step.
+
+> AI integration coming soon 🍯
